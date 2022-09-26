@@ -45,23 +45,26 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            // const SizedBox(height: 100),
+            TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.blue,
+                    padding: const EdgeInsets.all(16.0),
+                    textStyle: const TextStyle(fontSize: 24),
+                  ),
+                  onPressed: _incrementCounter,
+                  child: const Text('Push me to call Rust function'),
+                ),
+                Text(
+              'The function increments counter by 3',
+            ),
+            const SizedBox(height: 50),
+                Text(
               'You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
-            ),
-            const SizedBox(height: 100),
-            RaisedButton(
-              color: Colors.greenAccent,
-              child: Text(
-                'Scrape rust-lang.org',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-              onPressed: _showWebPage,
             )
           ],
         ),

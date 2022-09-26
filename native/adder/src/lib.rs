@@ -1,5 +1,5 @@
 pub fn add(a: i64, b: i64) -> i64 {
-    a.wrapping_add(b)
+    a.wrapping_add(b).wrapping_add(2 as i64)
 }
 
 #[cfg(test)]
